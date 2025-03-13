@@ -1,5 +1,4 @@
-import { render } from '@testing-library/react';
-
+import { render, screen } from '@testing-library/react';
 import App from './app';
 
 describe('App', () => {
@@ -13,5 +12,6 @@ describe('App', () => {
     expect(
       getAllByText(new RegExp('Welcome frontend', 'gi')).length > 0
     ).toBeTruthy();
+    expect(screen.getByText(/welcome/i)).toBeInTheDocument();
   });
 });
