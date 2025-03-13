@@ -10,13 +10,13 @@
       "vitest",
       "@nx/react/typings/cssmodule.d.ts",
       "@nx/react/typings/image.d.ts",
-      "@testing-library/jest-dom",
+      // "@testing-library/jest-dom",
     ]
   },
   "include": [
     "vite.config.ts",
     "vite.config.mts",
-    "vitest.config.ts",
+    // "vitest.config.ts",
     "vitest.config.mts",
     "src/**/*.test.ts",
     "src/**/*.spec.ts",
