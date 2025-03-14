@@ -1,4 +1,4 @@
-# UnitTestMonorepo
+# MyMonorepo
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
@@ -77,4 +77,15 @@ And join the Nx community:
 - [Our blog](https://nx.dev/blog?utm_source=nx_project&utm_medium=readme&utm_campaign=nx_projects)
 
 
+
+npx create-nx-workspace@latest my-monorepo --preset=apps
+cd my-monorepo
+npm install -D @nx/react
+npx nx generate @nx/react:app frontend
+npx nx test frontend
+cd apps/frontend
+npm install -D vitest @testing-library/react @testing-library/jest-dom jsdom msw
+npx nx g @nx/react:storybook-configuration frontend
+cd app/frontend
+npx msw init ./public --save
 - npx vitest run src/components/Button.test.tsx
